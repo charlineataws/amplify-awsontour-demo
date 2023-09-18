@@ -1,107 +1,70 @@
-# Embajadoras Cloud - Aplicación Full-Stack con AWS Amplify
+# Getting Started with Create React App
 
-## Modelo de Datos
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Crea tu modelo de datos en la consola de Amplify:
+## Available Scripts
 
-![Data Model](https://raw.githubusercontent.com/anacunha/amplify-embajadoras-cloud/main/content/DataModel.png)
+In the project directory, you can run:
 
-## Contenido
+### `npm start`
 
-| Name              | Description                                     | Photo                                                                                                     | Type   |
-| ----------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------ |
-| Athena            | Compañera fiel                                  | https://raw.githubusercontent.com/anacunha/amplify-embajadoras-cloud/main/content/pets/Athena.jpg         | DOG    |
-| Chuby             | También conocido como Chewbacca                 | https://raw.githubusercontent.com/anacunha/amplify-embajadoras-cloud/main/content/pets/Chuby.jpg          | DOG    |
-| Gremlina          | Llamada así en honor a los Gremlins 🐈‍⬛          | https://raw.githubusercontent.com/anacunha/amplify-embajadoras-cloud/main/content/pets/Gremlina.png       | CAT    |
-| Lambeau & Fortuna | Los perros de Memo 🖤                           | https://raw.githubusercontent.com/anacunha/amplify-embajadoras-cloud/main/content/pets/LambeauFortuna.jpg | DOG    |
-| Tatá              | Jabuti de 13 años 🐢                            | https://raw.githubusercontent.com/anacunha/amplify-embajadoras-cloud/main/content/pets/Tata.jpg           | TURTLE |
-| Tempestade        | Adorable pero nadie puede domarla 🌪            | https://raw.githubusercontent.com/anacunha/amplify-embajadoras-cloud/main/content/pets/Tempestade.jpg     | CAT    |
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## UI Library
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Sincronice el [archivo Figma](https://www.figma.com/file/IR938yKiMwblIN1AZcd8ES/Amplify-UI-Embajadoras-Cloud?type=design&node-id=861%3A3635&mode=design&t=gpCnrIyjoNlT4Iyn-1) como la UI library de su aplicación:
+### `npm test`
 
-![Figma](https://raw.githubusercontent.com/anacunha/amplify-embajadoras-cloud/main/content/Figma.png)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Data Binding
+### `npm run build`
 
-Vincula los componentes de UI al modelo de datos:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-![Data Binding](https://raw.githubusercontent.com/anacunha/amplify-embajadoras-cloud/main/content/DataBinding.png)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## UI Collection
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Seleccione el botón "Create Collection" en el editor de componentes para crear una colección de PetCards:
+### `npm run eject`
 
-![UI Collection](https://raw.githubusercontent.com/anacunha/amplify-embajadoras-cloud/main/content/UICollection.png)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Configuración de la Aplicación
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Crea una aplicación React:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-```shell
-npx create-react-app@latest adopta-una-mascota
-cd adopta-una-mascota
-```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Instala la CLI de Amplify:
+## Learn More
 
-```shell
-npm install -g @aws-amplify/cli
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Instala las dependencias de npm:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```shell
-npm install aws-amplify @aws-amplify/ui-react
-```
+### Code Splitting
 
-Configure Amplify agregando el siguiente código en su archivo index.js:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-```javascript
-import { ThemeProvider } from "@aws-amplify/ui-react";
-import { Amplify } from 'aws-amplify';
+### Analyzing the Bundle Size
 
-import awsconfig from './aws-exports';
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-import "@aws-amplify/ui-react/styles.css";
-import { studioTheme } from "./ui-components";
+### Making a Progressive Web App
 
-Amplify.configure(awsconfig);
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-En App.js, envuelva el componente `<App>` en `<ThemeProvider>`:
+### Advanced Configuration
 
-```javascript
-<ThemeProvider theme={studioTheme}>
-  <App/>
-</ThemeProvider>
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-## Uso del Componente
+### Deployment
 
-Haz `amplify pull` los componentes más recientes:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-```shell
-amplify pull
-```
+### `npm run build` fails to minify
 
-En App.js, importa y utiliza el componente:
-
-```javascript
-import './App.css';
-import { Flex } from "@aws-amplify/ui-react";
-import {PetCardCollection} from './ui-components';
-
-function App() {
-  return (
-    <div className="App">
-      <Flex justifyContent="center">
-        <PetCardCollection />
-      </Flex>
-    </div>
-  );
-}
-
-export default App;
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
