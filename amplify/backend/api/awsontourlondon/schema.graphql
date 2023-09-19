@@ -1,0 +1,13 @@
+enum PetType {
+  DOG
+  CAT
+  SQUIRREL
+}
+
+type Pet @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  description: String
+  photo: String
+  type: PetType
+}

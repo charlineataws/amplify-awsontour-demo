@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "awsontourlondon",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}
